@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
-#include "hashtable.h"
+#include "../include/hashtable.h"
 // defino las constantes c1 y c2 para la funcion quadratic
 #define C1 1  
 #define C2 3

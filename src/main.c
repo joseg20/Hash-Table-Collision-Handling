@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include "hashtable.h"
+#include "../include/hashtable.h"
 #include "hashtable.c"
 #include <time.h>
 
@@ -112,19 +112,19 @@ int main(int argc, char **argv)
         // SALIDA DE ARCHIVOS : La salida de archivos es por cada ciclo, por lo tanto saldran 4 mapas de cada tipo
         //------------------------------------------------
         if (NC_Linear >= 1000) // Me aseguro de que hayan 4 digitos para numeros mayores que 100 de elementos ingresados
-        sprintf(cadena_NC_Linear, "hash_linear_%d.txt", NC_Linear); // A traves de sprintf transformo mi contador entero a string y lo concateno donde deberia ir en el nombrbe del archivo
+        sprintf(cadena_NC_Linear, "bin/hash_linear_%d.txt", NC_Linear); // A traves de sprintf transformo mi contador entero a string y lo concateno donde deberia ir en el nombrbe del archivo
         if (NC_Linear < 1000)
-        sprintf(cadena_NC_Linear, "hash_linear_0%d.txt", NC_Linear);
+        sprintf(cadena_NC_Linear, "bin/hash_linear_0%d.txt", NC_Linear);
 
         if (NC_Linear >= 1000)
-        sprintf(cadena_NC_Quadratic, "hash_quadratic_%d.txt", NC_Quadratic);
+        sprintf(cadena_NC_Quadratic, "bin/hash_quadratic_%d.txt", NC_Quadratic);
         if (NC_Linear < 1000)
-        sprintf(cadena_NC_Quadratic, "hash_quadratic_0%d.txt", NC_Quadratic);
+        sprintf(cadena_NC_Quadratic, "bin/hash_quadratic_0%d.txt", NC_Quadratic);
         
         if (NC_Linear >= 1000)
-        sprintf(cadena_NC_Double, "hash_double_%d.txt", NC_Double);
+        sprintf(cadena_NC_Double, "bin/hash_double_%d.txt", NC_Double);
         if (NC_Linear < 1000)
-        sprintf(cadena_NC_Double, "hash_double_0%d.txt", NC_Double);
+        sprintf(cadena_NC_Double, "bin/hash_double_0%d.txt", NC_Double);
 
         hash_linear_out = fopen(cadena_NC_Linear, "wt"); // abro mis archivos como escritura y con el nombre correcto.
         hash_quadratic_out = fopen(cadena_NC_Quadratic, "wt");
